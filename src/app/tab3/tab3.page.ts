@@ -21,7 +21,6 @@ export class Tab3Page {
   enterAnimation = (baseEl: HTMLElement) => {
     const root = baseEl.shadowRoot;
 
-    // const first = document.querySelector('ion-button').getBoundingClientRect();
     const first = this.selectedButton.getBoundingClientRect();
     const last = document.querySelector('ion-app').getBoundingClientRect();
 
