@@ -42,13 +42,15 @@ export class Tab3Page {
       .addElement(root.querySelector('.modal-wrapper')!)
       .beforeStyles({
         ["transform-origin"]: "0 0",
+        ["opacity"]: "1"
       })
       .fromTo(
         "transform",
         `translate(${invert.x}px, ${invert.y}px) scale(${invert.scaleX}, ${invert.scaleY})`,
         "translate(0, 0) scale(1, 1)"
-      )
-      .fromTo("opacity", "0", "1");
+      );
+      //.fromTo("opacity", "0.4", "1");
+
 
     return this.animationCtrl
       .create()

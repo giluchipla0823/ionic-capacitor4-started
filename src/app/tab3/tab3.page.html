@@ -9,13 +9,13 @@
 <ion-content class="ion-padding">
   <ion-grid fixed>
     <ion-row>
-      <ion-col size="6" *ngFor="let item of [].constructor(24); let i = index">
+      <ion-col size="6" *ngFor="let item of [].constructor(20); let i = index">
         <ion-button expand="block" (click)="open(i)">Open Modal</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-modal #modal [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+  <ion-modal #modal [keepContentsMounted]="false" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
     <ng-template>
       <ion-header>
         <ion-toolbar>
@@ -25,7 +25,7 @@
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
+      <ion-content [forceOverscroll]="false">
         <ion-list>
           <ion-item>
             <ion-avatar slot="start">
@@ -54,7 +54,7 @@
               <p>Director of Operations</p>
             </ion-label>
           </ion-item>
-          <ion-item>
+          <ion-item *ngFor="let item of [].constructor(20)">
             <ion-avatar slot="start">
               <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
             </ion-avatar>
