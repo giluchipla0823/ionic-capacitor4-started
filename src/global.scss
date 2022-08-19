@@ -26,9 +26,13 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
-// Modals
+// Custom Modals
 ion-modal.custom-modal {
     &::part(handle) {
         top: 8px;
+    }
+
+    &::part(content) {
+        --border-radius: 10px;
     }
 }
