@@ -13,5 +13,25 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  
+  <ion-list *ngIf="device">
+    <ion-item>
+      <ion-label>UUID</ion-label>
+      <ion-note>{{ device.uuid }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>NAME</ion-label>
+      <ion-note>{{ device.name }}</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <!-- <div class="ion-padding" *ngIf="false">
+    <glcp-text-shell [data]="''" animation="bouncing"></glcp-text-shell>
+    <glcp-text-shell [data]="''" animation="gradient"></glcp-text-shell>
+
+
+    <glcp-aspect-ratio [ratio]="{w: 1, h: 1}">
+      <glcp-image-shell class="user-image" animation="spinner" [src]="''" [spinnerIconName]="'circular'"></glcp-image-shell>
+    </glcp-aspect-ratio>
+  </div> -->
 </ion-content>

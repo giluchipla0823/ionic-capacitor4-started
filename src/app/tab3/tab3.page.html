@@ -7,10 +7,13 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-grid fixed>
+  <ion-grid>
     <ion-row>
-      <ion-col size="6" *ngFor="let item of [].constructor(20); let i = index">
-        <ion-button expand="block" (click)="open(i)">Open Modal</ion-button>
+      <ion-col size="4" *ngFor="let item of [].constructor(20); let i = index">
+        <!-- <ion-button expand="block" (click)="open(i)">Open Modal</ion-button> -->
+        <ion-card class="card-avatar" (click)="open(i)" tappable>
+          <img [src]="'https://i.pravatar.cc/300?u=b'" />
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>

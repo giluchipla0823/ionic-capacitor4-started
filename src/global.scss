@@ -32,7 +32,43 @@ ion-modal.custom-modal {
         top: 8px;
     }
 
-    &::part(content) {
-        --border-radius: 10px;
+    &.md {
+        &::part(content) {
+            --border-radius: 10px 10px 0 0;
+        }
     }
 }
+
+// Need to add :root to take precedence over angular encapsulation of the glcp-text-shell component
+:root {
+    h1 > glcp-text-shell {
+      --font-size: 32px;
+      --text-shell-line-height: calc(var(--font-size) * 1.2);
+      --text-shell-line-color: #CCC;
+    }
+  
+    h2 > glcp-text-shell {
+      --font-size: 28px;
+      --text-shell-line-height: calc(var(--font-size) * 1.2);
+      --text-shell-line-color: #DDD;
+    }
+  
+    h3 > glcp-text-shell {
+      --font-size: 24px;
+      --text-shell-line-height: calc(var(--font-size) * 1.2);
+      --text-shell-line-color: #DDD;
+    }
+  
+    h4 > glcp-text-shell {
+      --font-size: 20px;
+      --text-shell-line-height: calc(var(--font-size) * 1.2);
+      --text-shell-line-color: #DDD;
+    }
+  
+    h5 > glcp-text-shell {
+      --font-size: 18px;
+      --text-shell-line-height: calc(var(--font-size) * 1.2);
+      --text-shell-line-color: #DDD;
+    }
+  }
+  
